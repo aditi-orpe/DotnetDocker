@@ -3,4 +3,4 @@ services :
   web :
    image : aditiorpe/dotnet-app-ubuntu-demo2:latest
    ports :
-      -80:80
+      -  "80:80"
