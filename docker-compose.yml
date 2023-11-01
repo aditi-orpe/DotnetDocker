@@ -1,6 +1,6 @@
 version : "3.3"
 services : 
   web :
-   image : aditiorpe/dotnetapp-demo1:latest
+   image : aditiorpe/dotnet-app-ubuntu-demo2:latest
    ports :
       -80:80
