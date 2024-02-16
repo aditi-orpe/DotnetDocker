@@ -3,9 +3,9 @@ WORKDIR /app
 COPY . .
 RUN dotnet restore "DotnetDocker.csproj"
 RUN dotnet publish -o /app/published-app
-EXPOSE 3000
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine as runtime
 WORKDIR /app
 COPY --from=build /app/published-app /app
+EXPOSE 80
 ENTRYPOINT [ "dotnet", "/app/DotnetDocker.dll" ]
