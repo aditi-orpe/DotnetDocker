@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dotnet-service
+spec:
+  selector:
+    app.kubernetes.io/name: dotnet-app
+  ports:
+  - name: dotnet-app
+    protocol: TCP
+    port: 80
+    targetPort: 80
