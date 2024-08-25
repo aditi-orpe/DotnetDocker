@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: dotnet-service
 spec:
-  type: LoadBalancer
   selector:
-    app.kubernetes.io/name: dotnet-app
+    app: dotnet-app
   ports:
   - name: dotnet-app
     protocol: TCP
     port: 80
     targetPort: 80
+  type: LoadBalancer
