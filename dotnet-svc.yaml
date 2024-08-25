@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: dotnet-service
 spec:
+  type: LoadBalancer
   selector:
     app.kubernetes.io/name: dotnet-app
   ports:
